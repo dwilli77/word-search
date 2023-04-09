@@ -2,37 +2,146 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App-container {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#Description {
+  background-color: whitesmoke;
+  border-radius: 12px;
+  padding: 6px 12px 6px 0;
+  color: #282c34;
+  text-align: initial;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ul {
+  margin: 0;
+}
+
+#SearchWordInputForm {
+  background-color: whitesmoke;
+  margin: 18px;
+  padding: 9px;
+  border-radius: 6px;
+}
+#SearchWordInputForm .num-counter {
+  font-size: 0.9rem;
+  text-align: right;
+  color: #282c34;
+}
+
+.red {
+  color: red !important;
+}
+
+#WordTagContainer {
+  background: whitesmoke;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 9px;
+}
+
+.word-counter {
+  color: #282c34;
+  font-size: 0.9rem;
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.puzzle-reset {
+  color: blue;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.puzzle-reset:hover {
+  color: lightskyblue;
+}
+
+#WordTag {
+  display: flex;
+  background-color: lightgray;
+  color: #282c34;
+  border-radius: 500px;
+  padding: 4px 9px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.remove-button {
+  cursor: pointer;
+}
+.remove-button:hover {
+  color: red;
+}
+
+.make-grid {
+  background-color: #ff8200;
+  color: whitesmoke;
+  width: 100%;
+  border-radius: 500px;
+  padding: 18px;
+  margin-top: 9px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.make-grid:hover {
+  color: lightblue;
+}
+
+.back-button-container {
+  text-align: left;
+  margin-bottom: 18px;
+  margin-top: -18px;
+}
+.word-bank {
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+.word-bank ul {
+  columns: 2;
+}
+
+td {
+  height: 34px;
+  width: 34px;
+}
+
+table {
+  margin-bottom: 36px;
+}
+
+@media print {
+  .App-container {
+    background: white;
+    color: #282c34;
+    margin-top: 72px;
   }
-  to {
-    transform: rotate(360deg);
+  #Description,
+  #SearchWordInputForm,
+  #WordTagContainer,
+  .back-button-container,
+  h1 {
+    display: none;
+  }
+  .word-bank {
+    font-size: 18px;
   }
 }

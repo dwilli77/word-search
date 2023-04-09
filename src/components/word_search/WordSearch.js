@@ -3,7 +3,7 @@ import Description from "../description/Description";
 import SearchWordInputForm from "../search_word_input_form/SearchWordInputForm";
 import WordTagContainer from "../word_tag_container/WordTagContainer";
 import PuzzleBuilder from "../../helpers/PuzzleBuilder";
-import LetterGrid from '../letter_grid/LetterGrid';
+import LetterGrid from "../letter_grid/LetterGrid";
 
 function WordSearch() {
   const [inputWord, setInputWord] = useState("");
@@ -73,8 +73,8 @@ function WordSearch() {
   const resetPuzzleAndWords = () => {
     resetPuzzle();
     setWords([]);
-    document.getElementById('word-search-input').focus();
-  }
+    document.getElementById("word-search-input").focus();
+  };
 
   const startPuzzleCreate = () => {
     setCreatingPuzzleLoader(true);
@@ -106,8 +106,12 @@ function WordSearch() {
 
   if (showPuzzle && puzzle) {
     return (
-        <LetterGrid puzzle={puzzle} words={words} goBack={() => setShowPuzzle(false)} />
-    )
+      <LetterGrid
+        puzzle={puzzle}
+        words={words}
+        goBack={() => setShowPuzzle(false)}
+      />
+    );
   }
 
   return (

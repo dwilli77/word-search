@@ -8,7 +8,7 @@ class PuzzleBuilder {
     const lettersOf = this.makeLettersOf(this.words);
     let results = false;
     do {
-      this.grid = this.makeGrid(this.gridSize)
+      this.grid = this.makeGrid(this.gridSize);
       results = this.placeWords(
         this.grid,
         this.gridSize,
@@ -111,7 +111,7 @@ class PuzzleBuilder {
   }
 
   findPlacement(gridSize, row, col, wordLength) {
-    const shuffledArray = this.shuffleArray([1,2,3,4]);
+    const shuffledArray = this.shuffleArray([1, 2, 3, 4]);
     // run these in a random order
     const functionsToCall = {
       1: {
@@ -130,10 +130,10 @@ class PuzzleBuilder {
         fn: () => this.fitsMirrorDiagonal(gridSize, row, col, wordLength),
         returnFn: this.mirrorDiagonal,
       },
-    }
+    };
     for (let i = 0; i < shuffledArray.length; i++) {
       if (functionsToCall[shuffledArray[i]].fn()) {
-        return functionsToCall[shuffledArray[i]].returnFn
+        return functionsToCall[shuffledArray[i]].returnFn;
       }
     }
   }
@@ -145,7 +145,10 @@ class PuzzleBuilder {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
     }
-    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
     return array;
   }
 

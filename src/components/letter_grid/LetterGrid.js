@@ -5,6 +5,7 @@ function LetterGrid({ puzzle, words, goBack }) {
         <button className="back-button" onClick={goBack}>
           ← Back
         </button>
+        <button className='print-button' onClick={window.print}>Print</button>
       </div>
       <table>
         <tbody>
